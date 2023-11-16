@@ -854,7 +854,7 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-        elif query.data == 'th':
+    elif query.data == 'th':
         if sys_status:
             cuy_new = "th"
             if not os.path.exists("tmp"):
