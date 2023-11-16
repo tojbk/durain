@@ -74,16 +74,16 @@ def start(update, context):
     keyboard = [[InlineKeyboardButton("开启", callback_data='sys_on'),
                  InlineKeyboardButton("关闭", callback_data='sys_off'),
                  InlineKeyboardButton("账户", callback_data="account")],
-                [InlineKeyboardButton("GMAIL", callback_data='gmail'),
-                 InlineKeyboardButton("GV", callback_data='googlevoice'),
-                 InlineKeyboardButton("AZURE", callback_data='azure')],
-                [InlineKeyboardButton("OPENAI", callback_data='openai'),
-                 InlineKeyboardButton("AWS", callback_data='aws'),
-                 InlineKeyboardButton("LINODE", callback_data='linode')],
-                [InlineKeyboardButton("PAYPAL", callback_data='paypal'),
+                [InlineKeyboardButton("Gmail", callback_data='gmail'),
+                 InlineKeyboardButton("Gv", callback_data='googlevoice'),
+                 InlineKeyboardButton("Azure", callback_data='azure')],
+                [InlineKeyboardButton("AWS", callback_data='aws'),
+                 InlineKeyboardButton("Linode", callback_data='linode'),
+                 InlineKeyboardButton("Netfilx", callback_data='netfilx')],
+                [InlineKeyboardButton("Paypal", callback_data='paypal'),
                  InlineKeyboardButton("TG", callback_data='telegram'),
-                 InlineKeyboardButton("DYNADOT", callback_data='dynadot')],
-                [InlineKeyboardButton("KAMATERA", callback_data='kamatera'),
+                 InlineKeyboardButton("Dynadot", callback_data='dynadot')],
+                [InlineKeyboardButton("Kamatera", callback_data='kamatera'),
                  InlineKeyboardButton("验证码", callback_data='verification_code'),
                  InlineKeyboardButton("重启", callback_data='reboot')],]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -96,24 +96,30 @@ def country_menu(update, context):
     query = update.callback_query
     global sys_status
     keyboard = [[InlineKeyboardButton("美国", callback_data='us'),
-                 InlineKeyboardButton("英国", callback_data='gb'),
-                 InlineKeyboardButton("新加坡", callback_data="sg")],
+                 InlineKeyboardButton("加拿大", callback_data='ca'),
+                 InlineKeyboardButton("墨西哥", callback_data='mx')],
                 [InlineKeyboardButton("澳大利亚", callback_data='au'),
                  InlineKeyboardButton("日本", callback_data='jp'),
-                 InlineKeyboardButton("加拿大", callback_data='ca')],
-                [InlineKeyboardButton("澳门", callback_data='mo'),
-                 InlineKeyboardButton("香港", callback_data='hk'),
-                 InlineKeyboardButton("台湾", callback_data='tw')],
-                [InlineKeyboardButton("墨西哥", callback_data='mx'),
-                 InlineKeyboardButton("德国", callback_data='de'),
+                 InlineKeyboardButton("马来西亚", callback_data='my')],
+                [InlineKeyboardButton("泰国", callback_data='th'),
+                 InlineKeyboardButton("新加坡", callback_data="sg"),
+                 InlineKeyboardButton("印度尼西亚", callback_data="id")],
+                [InlineKeyboardButton("菲律宾", callback_data="ph"),
+                 InlineKeyboardButton("澳门", callback_data='mo'),
+                 InlineKeyboardButton("香港", callback_data='hk')],
+                [InlineKeyboardButton("台湾", callback_data='tw'),
+                 InlineKeyboardButton("英国", callback_data='gb'),
                  InlineKeyboardButton("法国", callback_data='fr')],
-                [InlineKeyboardButton("马来西亚", callback_data='my'),
-                 InlineKeyboardButton("荷兰", callback_data='nl'),
-                 InlineKeyboardButton("尼日利亚", callback_data='es')],
-                [InlineKeyboardButton("西班牙", callback_data='my'),
-                 InlineKeyboardButton("南非", callback_data='za'),
-                 InlineKeyboardButton("意大利", callback_data='it')],
-                [InlineKeyboardButton("瑞典", callback_data='se'),
+                [InlineKeyboardButton("意大利", callback_data='it'),
+                 InlineKeyboardButton("德国", callback_data='de'),
+                 InlineKeyboardButton("荷兰", callback_data='nl')],
+                [InlineKeyboardButton("尼日利亚", callback_data='es'),
+                 InlineKeyboardButton("西班牙", callback_data='my'),
+                 InlineKeyboardButton("南非", callback_data='za')],
+                 InlineKeyboardButton("瑞典", callback_data='se'),
+                 InlineKeyboardButton("挪威", callback_data='no')],
+                [InlineKeyboardButton("乌克兰", callback_data='ua'),
+                 InlineKeyboardButton("埃及", callback_data='eg'),
                  InlineKeyboardButton("验证码", callback_data='verification_code')],]
     # add start and gmail buttons to reply_markup if they exist
     #if 'start_buttons' in context.user_data:
@@ -148,42 +154,54 @@ def verification_code(update, context):
             country_code = f.read()
             if country_code == 'us':
                 display_country = "美国"
-            elif country_code == 'gb':
-                display_country = "英国"
-            elif country_code == 'sg':
-                display_country = "新加坡"
+            elif country_code == 'ca':
+                display_country = "加拿大"
+            elif country_code == 'mx':
+                display_country = "墨西哥"
             elif country_code == 'au':
                 display_country = "澳大利亚"
             elif country_code == 'jp':
                 display_country = "日本"
-            elif country_code == 'ca':
-                display_country = "加拿大"
             elif country_code == 'my':
                 display_country = "马来西亚"
-            elif country_code == 'hk':
-                display_country = "香港"
+            elif country_code == 'th':
+                display_country = "泰国"
+            elif country_code == 'sg':
+                display_country = "新加坡"
+            elif country_code == 'id':
+                display_country = "印度尼西亚"
+            elif country_code == 'ph':
+                display_country = "菲律宾"
             elif country_code == 'mo':
                 display_country = "澳门"
+            elif country_code == 'hk':
+                display_country = "香港"
             elif country_code == 'tw':
                 display_country = "台湾"
-            elif country_code == 'ng':
-                display_country = "尼日利亚"
-            elif country_code == 'mx':
-                display_country = "墨西哥"
-            elif country_code == 'de':
-                display_country = "德国"
+            elif country_code == 'gb':
+                display_country = "英国"
             elif country_code == 'fr':
                 display_country = "法国"
+            elif country_code == 'it':
+                display_country = "意大利"
+            elif country_code == 'de':
+                display_country = "德国"
             elif country_code == 'nl':
                 display_country = "荷兰"
+            elif country_code == 'ng':
+                display_country = "尼日利亚"
             elif country_code == 'es':
                 display_country = "西班牙"
             elif country_code == 'za':
                 display_country = "南非"
-            elif country_code == 'it':
-                display_country = "意大利"
             elif country_code == 'se':
                 display_country = "瑞典"
+            elif country_code == 'no':
+                display_country = "挪威"
+            elif country_code == 'ua':
+                display_country = "乌克兰"
+            elif country_code == 'eg':
+                display_country = "埃及"
             else:
                 display_country = ""
 
@@ -284,42 +302,54 @@ def get_number(update, context):
             country_code = f.read()
             if country_code == 'us':
                 display_country = "美国"
-            elif country_code == 'gb':
-                display_country = "英国"
-            elif country_code == 'sg':
-                display_country = "新加坡"
+            elif country_code == 'ca':
+                display_country = "加拿大"
+            elif country_code == 'mx':
+                display_country = "墨西哥"
             elif country_code == 'au':
                 display_country = "澳大利亚"
             elif country_code == 'jp':
                 display_country = "日本"
-            elif country_code == 'ca':
-                display_country = "加拿大"
             elif country_code == 'my':
                 display_country = "马来西亚"
-            elif country_code == 'hk':
-                display_country = "香港"
+            elif country_code == 'th':
+                display_country = "泰国"
+            elif country_code == 'sg':
+                display_country = "新加坡"
+            elif country_code == 'id':
+                display_country = "印度尼西亚"
+            elif country_code == 'ph':
+                display_country = "菲律宾"
             elif country_code == 'mo':
                 display_country = "澳门"
+            elif country_code == 'hk':
+                display_country = "香港"
             elif country_code == 'tw':
                 display_country = "台湾"
-            elif country_code == 'ng':
-                display_country = "尼日利亚"
-            elif country_code == 'mx':
-                display_country = "墨西哥"
-            elif country_code == 'de':
-                display_country = "德国"
+            elif country_code == 'gb':
+                display_country = "英国"
             elif country_code == 'fr':
                 display_country = "法国"
+            elif country_code == 'it':
+                display_country = "意大利"
+            elif country_code == 'de':
+                display_country = "德国"
             elif country_code == 'nl':
                 display_country = "荷兰"
+            elif country_code == 'ng':
+                display_country = "尼日利亚"
             elif country_code == 'es':
                 display_country = "西班牙"
             elif country_code == 'za':
                 display_country = "南非"
-            elif country_code == 'it':
-                display_country = "意大利"
             elif country_code == 'se':
                 display_country = "瑞典"
+            elif country_code == 'no':
+                display_country = "挪威"
+            elif country_code == 'ua':
+                display_country = "乌克兰"
+            elif country_code == 'eg':
+                display_country = "埃及"
             else:
                 display_country = ""
     except:
@@ -588,7 +618,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0097"
             pid_new2 = "0098"
-            liulian_functions = "GMAIL"
+            liulian_functions = "GMmail"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -606,7 +636,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0241"
             pid_new2 = "0049"
-            liulian_functions = "AZURE"
+            liulian_functions = "Azure"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -620,11 +650,11 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'openai':
+    elif query.data == 'aws':
         if sys_status:
-            pid_new1 = "1514"
-            pid_new2 = "1514"
-            liulian_functions = "OPENAI"
+            pid_new1 = "0209"
+            pid_new2 = "0209"
+            liulian_functions = "AWS"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -692,11 +722,11 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'aws':
+    elif query.data == 'netfilx':
         if sys_status:
-            pid_new1 = "0209"
-            pid_new2 = "0209"
-            liulian_functions = "AWS"
+            pid_new1 = "0208"
+            pid_new2 = "0208"
+            liulian_functions = "Netfilx"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -824,6 +854,78 @@ def button(update, context):
             return
         else:
             query.answer(txt)
+        elif query.data == 'th':
+        if sys_status:
+            cuy_new = "th"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'id':
+        if sys_status:
+            cuy_new = "id"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'ph':
+        if sys_status:
+            cuy_new = "ph"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'no':
+        if sys_status:
+            cuy_new = "no"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'ua':
+        if sys_status:
+            cuy_new = "ua"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'eg':
+        if sys_status:
+            cuy_new = "eg"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)        
     elif query.data == 'ca':
         if sys_status:
             cuy_new = "ca"
