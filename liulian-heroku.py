@@ -116,10 +116,10 @@ def country_menu(update, context):
                 [InlineKeyboardButton("尼日利亚", callback_data='es'),
                  InlineKeyboardButton("西班牙", callback_data='my'),
                  InlineKeyboardButton("南非", callback_data='za')],
-                 InlineKeyboardButton("瑞典", callback_data='se'),
-                 InlineKeyboardButton("挪威", callback_data='no')],
-                [InlineKeyboardButton("乌克兰", callback_data='ua'),
-                 InlineKeyboardButton("埃及", callback_data='eg'),
+                [InlineKeyboardButton("瑞典", callback_data='se'),
+                 InlineKeyboardButton("挪威", callback_data='no'),
+                 InlineKeyboardButton("乌克兰", callback_data='ua')],
+                [InlineKeyboardButton("埃及", callback_data='eg'),
                  InlineKeyboardButton("验证码", callback_data='verification_code')],]
     # add start and gmail buttons to reply_markup if they exist
     #if 'start_buttons' in context.user_data:
