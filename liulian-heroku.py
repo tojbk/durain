@@ -113,10 +113,10 @@ def country_menu(update, context):
                 [InlineKeyboardButton("意大利", callback_data='it'),
                  InlineKeyboardButton("德国", callback_data='de'),
                  InlineKeyboardButton("荷兰", callback_data='nl')],
-                [InlineKeyboardButton("尼日利亚", callback_data='es'),
+                [InlineKeyboardButton("尼日利亚", callback_data='ng'),
                  InlineKeyboardButton("西班牙", callback_data='my'),
                  InlineKeyboardButton("南非", callback_data='za')],
-                [InlineKeyboardButton("瑞典", callback_data='se'),
+                [InlineKeyboardButton("土耳其", callback_data='tr'),
                  InlineKeyboardButton("挪威", callback_data='no'),
                  InlineKeyboardButton("乌克兰", callback_data='ua')],
                 [InlineKeyboardButton("埃及", callback_data='eg'),
@@ -194,8 +194,8 @@ def verification_code(update, context):
                 display_country = "西班牙"
             elif country_code == 'za':
                 display_country = "南非"
-            elif country_code == 'se':
-                display_country = "瑞典"
+            elif country_code == 'tr':
+                display_country = "土耳其"
             elif country_code == 'no':
                 display_country = "挪威"
             elif country_code == 'ua':
@@ -342,8 +342,8 @@ def get_number(update, context):
                 display_country = "西班牙"
             elif country_code == 'za':
                 display_country = "南非"
-            elif country_code == 'se':
-                display_country = "瑞典"
+            elif country_code == 'tr':
+                display_country = "土耳其"
             elif country_code == 'no':
                 display_country = "挪威"
             elif country_code == 'ua':
