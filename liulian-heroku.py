@@ -1082,6 +1082,18 @@ def button(update, context):
             return
         else:
             query.answer(txt)
+    elif query.data == 'tr':
+        if sys_status:
+            cuy_new = "tr"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)            
     elif query.data == 'th':
         if sys_status:
             cuy_new = "th"
