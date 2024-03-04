@@ -102,25 +102,24 @@ def country_menu(update, context):
                  InlineKeyboardButton("香港", callback_data='hk'),
                  InlineKeyboardButton("台湾", callback_data='tw')],
                 [InlineKeyboardButton("日本", callback_data='jp'),
-                 InlineKeyboardButton("马来西亚", callback_data='my'),
-                 InlineKeyboardButton("泰国", callback_data='th')],
-                [InlineKeyboardButton("新加坡", callback_data="sg"),
-                 InlineKeyboardButton("印度尼西亚", callback_data="id"),
-                 InlineKeyboardButton("菲律宾", callback_data="ph")],
-                [InlineKeyboardButton("澳门", callback_data='mo'),
-                 InlineKeyboardButton("英国", callback_data='gb'),
-                 InlineKeyboardButton("法国", callback_data='fr')],
-                [InlineKeyboardButton("意大利", callback_data='it'),
-                 InlineKeyboardButton("德国", callback_data='de'),
-                 InlineKeyboardButton("荷兰", callback_data='nl')],
-                [InlineKeyboardButton("尼日利亚", callback_data='ng'),
-                 InlineKeyboardButton("西班牙", callback_data='es'),
-                 InlineKeyboardButton("南非", callback_data='za')],
-                [InlineKeyboardButton("土耳其", callback_data='tr'),
-                 InlineKeyboardButton("挪威", callback_data='no'),
-                 InlineKeyboardButton("爱尔兰", callback_data='ie')],
-                [InlineKeyboardButton("埃及", callback_data='eg'),
-                 InlineKeyboardButton("验证码", callback_data='verification_code')],]
+                 InlineKeyboardButton("新加坡", callback_data='sg'),
+                 InlineKeyboardButton("马来西亚", callback_data='my')],
+                [InlineKeyboardButton("泰国", callback_data='th'),
+                 InlineKeyboardButton("印度尼西亚", callback_data='id'),
+                 InlineKeyboardButton("菲律宾", callback_data='ph')],
+                [InlineKeyboardButton("英国", callback_data='gb'),
+                 InlineKeyboardButton("法国", callback_data='fr'),
+                 InlineKeyboardButton("意大利", callback_data='it')],
+                [InlineKeyboardButton("德国", callback_data='de'),
+                 InlineKeyboardButton("荷兰", callback_data='nl'),
+                 InlineKeyboardButton("尼日利亚", callback_data='ng')],
+                [InlineKeyboardButton("西班牙", callback_data='es'),
+                 InlineKeyboardButton("南非", callback_data='za'),
+                 InlineKeyboardButton("土耳其", callback_data='tr')],
+                [InlineKeyboardButton("挪威", callback_data='no'),
+                 InlineKeyboardButton("爱尔兰", callback_data='ie'),
+                 InlineKeyboardButton("埃及", callback_data='eg')],
+                [InlineKeyboardButton("验证码", callback_data='verification_code')],]
     # add start and gmail buttons to reply_markup if they exist
     #if 'start_buttons' in context.user_data:
     #    keyboard = context.user_data['start_buttons'] + keyboard
@@ -160,24 +159,22 @@ def verification_code(update, context):
                 display_country = "墨西哥"
             elif country_code == 'au':
                 display_country = "澳大利亚"
-            elif country_code == 'jp':
-                display_country = "日本"
-            elif country_code == 'my':
-                display_country = "马来西亚"
-            elif country_code == 'th':
-                display_country = "泰国"
-            elif country_code == 'sg':
-                display_country = "新加坡"
-            elif country_code == 'id':
-                display_country = "印度尼西亚"
-            elif country_code == 'ph':
-                display_country = "菲律宾"
-            elif country_code == 'mo':
-                display_country = "澳门"
             elif country_code == 'hk':
                 display_country = "香港"
             elif country_code == 'tw':
                 display_country = "台湾"
+            elif country_code == 'jp':
+                display_country = "日本"      
+            elif country_code == 'sg':
+                display_country = "新加坡"
+            elif country_code == 'my':
+                display_country = "马来西亚"
+            elif country_code == 'th':
+                display_country = "泰国"
+            elif country_code == 'id':
+                display_country = "印度尼西亚"
+            elif country_code == 'ph':
+                display_country = "菲律宾"
             elif country_code == 'gb':
                 display_country = "英国"
             elif country_code == 'fr':
@@ -308,24 +305,22 @@ def get_number(update, context):
                 display_country = "墨西哥"
             elif country_code == 'au':
                 display_country = "澳大利亚"
-            elif country_code == 'jp':
-                display_country = "日本"
-            elif country_code == 'my':
-                display_country = "马来西亚"
-            elif country_code == 'th':
-                display_country = "泰国"
-            elif country_code == 'sg':
-                display_country = "新加坡"
-            elif country_code == 'id':
-                display_country = "印度尼西亚"
-            elif country_code == 'ph':
-                display_country = "菲律宾"
-            elif country_code == 'mo':
-                display_country = "澳门"
             elif country_code == 'hk':
                 display_country = "香港"
             elif country_code == 'tw':
                 display_country = "台湾"
+            elif country_code == 'jp':
+                display_country = "日本"
+            elif country_code == 'sg':
+                display_country = "新加坡"
+            elif country_code == 'my':
+                display_country = "马来西亚"
+            elif country_code == 'th':
+                display_country = "泰国"
+            elif country_code == 'id':
+                display_country = "印度尼西亚"
+            elif country_code == 'ph':
+                display_country = "菲律宾"
             elif country_code == 'gb':
                 display_country = "英国"
             elif country_code == 'fr':
@@ -806,9 +801,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'gb':
+    elif query.data == 'ca':
         if sys_status:
-            cuy_new = "gb"
+            cuy_new = "ca"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -818,9 +813,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'sg':
+    elif query.data == 'mx':
         if sys_status:
-            cuy_new = "sg"
+            cuy_new = "mx"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -842,6 +837,30 @@ def button(update, context):
             return
         else:
             query.answer(txt)
+    elif query.data == 'hk':
+        if sys_status:
+            cuy_new = "hk"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'tw':
+        if sys_status:
+            cuy_new = "tw"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
     elif query.data == 'jp':
         if sys_status:
             cuy_new = "jp"
@@ -854,6 +873,42 @@ def button(update, context):
             return
         else:
             query.answer(txt)
+    elif query.data == 'sg':
+        if sys_status:
+            cuy_new = "sg"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'my':
+        if sys_status:
+            cuy_new = "my"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'th':
+        if sys_status:
+            cuy_new = "th"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)        
     elif query.data == 'id':
         if sys_status:
             cuy_new = "id"
@@ -878,129 +933,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'no':
+    elif query.data == 'gb':
         if sys_status:
-            cuy_new = "no"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'ua':
-        if sys_status:
-            cuy_new = "ua"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'eg':
-        if sys_status:
-            cuy_new = "eg"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)        
-    elif query.data == 'ca':
-        if sys_status:
-            cuy_new = "ca"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'my':
-        if sys_status:
-            cuy_new = "my"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'hk':
-        if sys_status:
-            cuy_new = "hk"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'mo':
-        if sys_status:
-            cuy_new = "mo"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'tw':
-        if sys_status:
-            cuy_new = "tw"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'ng':
-        if sys_status:
-            cuy_new = "ng"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'mx':
-        if sys_status:
-            cuy_new = "mx"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)
-    elif query.data == 'de':
-        if sys_status:
-            cuy_new = "de"
+            cuy_new = "gb"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -1022,9 +957,45 @@ def button(update, context):
             return
         else:
             query.answer(txt)
+    elif query.data == 'it':
+        if sys_status:
+            cuy_new = "it"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'de':
+        if sys_status:
+            cuy_new = "de"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
     elif query.data == 'nl':
         if sys_status:
             cuy_new = "nl"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'ng':
+        if sys_status:
+            cuy_new = "ng"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -1058,9 +1029,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'it':
+    elif query.data == 'tr':
         if sys_status:
-            cuy_new = "it"
+            cuy_new = "tr"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -1070,9 +1041,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'se':
+    elif query.data == 'no':
         if sys_status:
-            cuy_new = "se"
+            cuy_new = "no"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -1094,9 +1065,9 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'tr':
+    elif query.data == 'eg':
         if sys_status:
-            cuy_new = "tr"
+            cuy_new = "eg"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
@@ -1104,24 +1075,6 @@ def button(update, context):
             query.answer("正在处理请求，请稍候...")
             get_number(update, context)
             return
-        else:
-            query.answer(txt)            
-    elif query.data == 'th':
-        if sys_status:
-            cuy_new = "th"
-            if not os.path.exists("tmp"):
-                os.mkdir("tmp")
-            with open("tmp/country.txt", "w") as f:
-                f.write(str(cuy_new))
-            query.answer("正在处理请求，请稍候...")
-            get_number(update, context)
-            return
-        else:
-            query.answer(txt)  
-    elif query.data in ['5', '6', '7', '8', '9']:
-        if sys_status:
-            # execute the functionality for the selected button
-            pass
         else:
             query.answer(txt)
     else:
