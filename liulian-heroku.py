@@ -649,7 +649,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0209"
             pid_new2 = "0209"
-            liulian_functions = "AWS"
+            liulian_functions = "Aws"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
