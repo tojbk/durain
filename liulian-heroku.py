@@ -667,7 +667,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "2257"
             pid_new2 = "2257"
-            liulian_functions = "LINODE"
+            liulian_functions = "Linode"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -685,7 +685,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0271"
             pid_new2 = "0271"
-            liulian_functions = "PAYPAL"
+            liulian_functions = "Paypal"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -703,7 +703,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0257"
             pid_new2 = "0257"
-            liulian_functions = "TELEGRAM"
+            liulian_functions = "Telegram"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -739,7 +739,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "3026"
             pid_new2 = "3026"
-            liulian_functions = "dynadot"
+            liulian_functions = "Dynadot"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
@@ -757,7 +757,7 @@ def button(update, context):
         if sys_status:
             pid_new1 = "0822"
             pid_new2 = "0822"
-            liulian_functions = "kamatera"
+            liulian_functions = "Kamatera"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
