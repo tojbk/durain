@@ -114,11 +114,11 @@ def country_menu(update, context):
                  InlineKeyboardButton("德国", callback_data='de'),
                  InlineKeyboardButton("荷兰", callback_data='nl')],
                 [InlineKeyboardButton("尼日利亚", callback_data='ng'),
-                 InlineKeyboardButton("西班牙", callback_data='my'),
+                 InlineKeyboardButton("西班牙", callback_data='es'),
                  InlineKeyboardButton("南非", callback_data='za')],
                 [InlineKeyboardButton("土耳其", callback_data='tr'),
                  InlineKeyboardButton("挪威", callback_data='no'),
-                 InlineKeyboardButton("乌克兰", callback_data='ua')],
+                 InlineKeyboardButton("爱尔兰", callback_data='ie')],
                 [InlineKeyboardButton("埃及", callback_data='eg'),
                  InlineKeyboardButton("验证码", callback_data='verification_code')],]
     # add start and gmail buttons to reply_markup if they exist
@@ -198,8 +198,8 @@ def verification_code(update, context):
                 display_country = "土耳其"
             elif country_code == 'no':
                 display_country = "挪威"
-            elif country_code == 'ua':
-                display_country = "乌克兰"
+            elif country_code == 'ie':
+                display_country = "爱尔兰"
             elif country_code == 'eg':
                 display_country = "埃及"
             else:
@@ -346,8 +346,8 @@ def get_number(update, context):
                 display_country = "土耳其"
             elif country_code == 'no':
                 display_country = "挪威"
-            elif country_code == 'ua':
-                display_country = "乌克兰"
+            elif country_code == 'ie':
+                display_country = "爱尔兰"
             elif country_code == 'eg':
                 display_country = "埃及"
             else:
@@ -1073,6 +1073,18 @@ def button(update, context):
     elif query.data == 'se':
         if sys_status:
             cuy_new = "se"
+            if not os.path.exists("tmp"):
+                os.mkdir("tmp")
+            with open("tmp/country.txt", "w") as f:
+                f.write(str(cuy_new))
+            query.answer("正在处理请求，请稍候...")
+            get_number(update, context)
+            return
+        else:
+            query.answer(txt)
+    elif query.data == 'ie':
+        if sys_status:
+            cuy_new = "ie"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/country.txt", "w") as f:
