@@ -202,7 +202,7 @@ def verification_code(update, context):
             else:
                 display_country = ""
 
-        message_text = "{} {}获取验证码中...".format(liulian_functions, display_country)
+        message_text = "{} {} 获取验证码中...".format(liulian_functions, display_country)
         bot.send_message(chat_id=chat_id, text=message_text)
 
         def code_thread():
@@ -351,7 +351,7 @@ def get_number(update, context):
         pass
     logging.info("User %s (id=%d, %s) selected the %s option at %s", update.callback_query.from_user.username, update.callback_query.from_user.id, update.callback_query.from_user.first_name, liulian_functions, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     if sys_status:
-        message_text = "{} {}接码中...".format(liulian_functions, display_country)
+        message_text = "{} {} 获取号码中...".format(liulian_functions, display_country)
         bot.send_message(chat_id=chat_id, text=message_text)
         try:
             with open("tmp/phone_number.txt", "r") as f:
@@ -488,7 +488,7 @@ def googlevoice(update, context):
     chat_id = update.callback_query.message.chat_id
     logging.info("User %s (id=%d, %s) selected the GV option at %s", update.callback_query.from_user.username, update.callback_query.from_user.id, update.callback_query.from_user.first_name, datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     if sys_status:
-        message_text = "GV接码中..."
+        message_text = "GV 获取号码中..."
         bot.send_message(chat_id=chat_id, text=message_text)
         try:
             with open("tmp/phone_number.txt", "r") as f:
