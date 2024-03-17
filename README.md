@@ -20,3 +20,7 @@ heroku  git push heroku main
 添加变量值
 
 heroku config:set APIKEY=You durain API AUTHORIZED_USERS=You TG id BOT_TOKEN=You TG bot Token
+
+启动运行
+
+heroku ps:scale worker=1
