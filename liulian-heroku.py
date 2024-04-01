@@ -83,7 +83,7 @@ def start(update, context):
                 [InlineKeyboardButton("Paypal", callback_data='paypal'),
                  InlineKeyboardButton("TG", callback_data='telegram'),
                  InlineKeyboardButton("Dynadot", callback_data='dynadot')],
-                [InlineKeyboardButton("Kamatera", callback_data='kamatera'),
+                [InlineKeyboardButton("Win365", callback_data='Windows 365'),
                  InlineKeyboardButton("验证码", callback_data='verification_code'),
                  InlineKeyboardButton("重启", callback_data='reboot')],]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -753,11 +753,11 @@ def button(update, context):
             return
         else:
             query.answer(txt)
-    elif query.data == 'kamatera':
+    elif query.data == 'Windows 365':
         if sys_status:
-            pid_new1 = "0822"
-            pid_new2 = "0822"
-            liulian_functions = "Kamatera"
+            pid_new1 = "3958"
+            pid_new2 = "3958"
+            liulian_functions = "Windows 365"
             if not os.path.exists("tmp"):
                 os.mkdir("tmp")
             with open("tmp/pid_new1.txt", "w") as f:
