@@ -34,10 +34,10 @@ pn = ""
 
 bot = None
 
-endpoint_account = f"http://api.drncloud.com/out/ext_api/getUserInfo?name={name}&pwd={pwd}&ApiKey={ApiKey}"
-endpoint_phone = f"http://api.drncloud.com/out/ext_api/getMobile?name={name}&pwd={pwd}&ApiKey={ApiKey}&cuy={cuy}&pid={pid}&num=1&noblack=0&serial=2&secret_key=null&vip=null"
-endpoint_code = f"http://api.drncloud.com/out/ext_api/getMsg?name={name}&pwd={pwd}&ApiKey={ApiKey}&pn={pn}&pid={pid}&serial=2"
-endpoint_release = f"http://api.drncloud.com/out/ext_api/passMobile?name={name}&pwd={pwd}&ApiKey={ApiKey}&pn=+{pn}&pid={pid}&serial=2"
+endpoint_account = f"http://api.durianrcs.com/out/ext_api/getUserInfo?name={name}&pwd={pwd}&ApiKey={ApiKey}"
+endpoint_phone = f"http://api.durianrcs.com/out/ext_api/getMobile?name={name}&pwd={pwd}&ApiKey={ApiKey}&cuy={cuy}&pid={pid}&num=1&noblack=0&serial=2&secret_key=null&vip=null"
+endpoint_code = f"http://api.durianrcs.com/out/ext_api/getMsg?name={name}&pwd={pwd}&ApiKey={ApiKey}&pn={pn}&pid={pid}&serial=2"
+endpoint_release = f"http://api.durianrcs.com/out/ext_api/passMobile?name={name}&pwd={pwd}&ApiKey={ApiKey}&pn=+{pn}&pid={pid}&serial=2"
 
 sys_status = False
 
