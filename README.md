@@ -13,14 +13,14 @@ git commit -m "My first commit"
 
 heroku git:remote -a durain
 
-推送
+push
 
 heroku  git push heroku main
 
-添加变量值
+Adding Variable Values
 
 heroku config:set APIKEY=You durain API AUTHORIZED_USERS=You TG id BOT_TOKEN=You TG bot Token
 
-启动运行
+start
 
 heroku ps:scale worker=1
