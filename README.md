@@ -1,4 +1,5 @@
 # sms
+=======
 git clone local
 
 Create Heroku
@@ -15,7 +16,7 @@ heroku git:remote -a durain
 
 push
 
-heroku  git push heroku main
+heroku git push heroku main
 
 Adding Variable Values
 
