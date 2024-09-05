@@ -1,11 +1,10 @@
-# sms
-git clone 到本地
+git clone local
 
-创建Heroku应用
+Create Heroku
 
 heroku create -a durain
 
-初始化 git
+initialize git
 
 git add .
 
@@ -15,7 +14,7 @@ heroku git:remote -a durain
 
 push
 
-heroku  git push heroku main
+heroku git push heroku main
 
 Adding Variable Values
 
